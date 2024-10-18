@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store - Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .product-image {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .product-details h3 {
+            margin: 0 0 10px 0;
+            color: #3498db;
+        }
+        .price {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .quantity {
+            color: #7f8c8d;
+        }
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Store Checkout</h1>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/100x150" alt="Book Cover" class="product-image">
+            <div class="product-details">
+                <h3>Node.js and Express book</h3>
+                <p class="price">Price: $50</p>
+                <p class="quantity">Quantity: 1</p>
+            </div>
+        </div>
+
+        <form action="/checkout" method="post">
+            <input type="submit" value="Proceed to Checkout" class="checkout-btn">
+        </form>
+    </div>
+</body>
+</html>
